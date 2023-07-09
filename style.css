@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+/* mles fonts */
+@font-face {
+    font-family:"SanFranciscoReg";
+    src: url("fonts/SFUIText-Regular.otf");
+}
+@font-face {
+    font-family:"SanFranciscoBol";
+    src: url("fonts/SFUIText-Bold.otf");
+}
+@font-face {
+    font-family:"SanFranciscoSemi";
+    src: url("fonts/SFUIText-Semibold.otf");
+}
+body{
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image:url("Image&data/Background.png");
+}
+
+/* Let's start the desktop last */
+@media (min-width:600px){
+    header {
+        display: flex;
+        width:100%;/*Toujours utiliser les pourcentages au niveu
+        des widths quand on utilise des paddings pour  qu'ils prennent effte et non le vw */
+    
+        height:10vh;
+        /* background-color: red;  */
+    
+    }
+    .icon-lemon{
+        width:64px;
+        height: 64px;
+        
+    }
+    .bars{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width:95%;
+        height:inherit;
+
+    }
+    ul{
+        display: flex;
+        list-style:none; 
+        margin-right: 70px;
+
+    }
+    li a {
+        font-family:"SanFranciscoSemi";
+        font-size:14px;
+        color: #131B23;
+        text-decoration: none;
+
+        padding: 16px;
+    }
+    
+
+    .hero-zone{
+        font-family: "SanFranciscoReg";
+        font-size:50px;
+        color: #131B23;
+    }
+    .text-zone{
+        width: fit-content;
+        display: inline-block;
+         
+    }
+    .description{
+        font-size:23px;
+            }
+    .works-button{
+        display:none;
+    }
+    .pfp{
+        display: inline-block;
+        margin-top: 100px;
+        margin-left: 40px;
+    }
+    footer{
+        width:100%;
+        height:30vh;
+        /* background-color: orange; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+    .icon{
+        width:27px;
+        height:24px;
+        color:#131B23;
+        padding:8px;
+    }
+    .icon-container:first-child{
+        padding-left:0px;
+    }
+    
+    .email{
+        margin-left:8px;
+        color: #131B23;
+        font-family: "SanFranciscoReg";
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+    
+
+/* Lets start the Mobile-first */
+@media(max-width:600px){
+    header{
+        /* background-color: purple;  */
+        display: flex;
+        justify-content: space-between;
+    }
+    body{
+        color: #131B23;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .icon-lemon{
+        width:50px;
+        height:50px;
+        /* animation: updown 1s infinite alternate */
+       
+    }
+    .liks-container{
+        display: none;
+    }
+    nav{
+        justify-self: end;
+        width:fit-content;
+        height:inherit;
+
+        display: flex;
+        align-items: center;
+        
+    }
+     nav .bars{
+        
+        width:48px;
+        height: 48px;
+    } 
+    .hero-zone{
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 70px;
+
+        height: 60vh;
+        width: 100%;
+
+        font-family:"SanFranciscoReg";
+        font-size: 30px;
+    }
+    .description{
+        font-size:10px;
+        margin-top: 5px;
+    
+    }
+    .pfp{
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+    }
+    footer{
+        width: 100%;
+        height:30vh;
+        /* background-color: orange; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+ 
+    }
+    .icon-container{
+        display: flex;
+        width: 172px;
+        height:15px;
+        justify-content: center;
+    }
+    .icon{
+        width:18px;
+        height:15px;
+        color:#131B23;
+        padding:8px;
+    }
+    .email{
+        font-family: "SanFranciscoReg";
+        font-size: 9px;
+        text-decoration: none;
+
+        margin-top: 15px;
+
+        color: #131B23;
+
+    }
+
+    .works-button{
+        border-radius: 30px;
+        width:102px;
+        height:33px;
+        background-color: transparent;
+        border: 0.6px solid #131B23;
+        margin-top: 20px;
+
+        font-family: "SanFranciscoSemi";
+        color: #131B23;
+        font-size:9px;
+        font-family: "SanFranciscoSemi";
+    }
+    button a{
+        text-decoration: none;
+        color:#131B23;
+
+
+    }
+    .links-container{
+        display: none;
+    }
+
+
+}
+
+/* ajouter une sorte d'animation au niveau de l'icone , un mouvment de haut en bas  */
+
+@keyframes updown {
+    from {
+        margin: 0px;
+        transform: translateY(0);
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        
+    }
+    to{
+        margin-top: -10px;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); */
+    }
+    
+}
